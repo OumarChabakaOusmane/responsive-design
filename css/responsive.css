@@ -1,0 +1,87 @@
+/* Affichage horizontal des features sur tous les appareils */
+.features {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.feature {
+    flex: 1 1 33.33%;
+    min-width: 200px;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+/* Breakpoint 320px - Petits smartphones */
+@media (min-width: 320px) {
+    .site-header h1 {
+        font-size: 1.4rem;
+        padding: 0 0.5rem;
+    }
+    
+    .site-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Breakpoint 375px - Smartphones moyens */
+@media (min-width: 375px) {
+    .site-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .feature {
+        font-size: 1rem;
+    }
+}
+
+/* Breakpoint 425px - Grands smartphones */
+@media (min-width: 425px) {
+    .site-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .intro h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Breakpoint 768px - Tablettes */
+@media (min-width: 768px) {
+    .site-nav ul {
+        gap: 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Breakpoint 1024px - Petits écrans desktop */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .site-main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
+
+/* Breakpoint 1440px - Grands écrans desktop */
+@media (min-width: 1440px) {
+    .site-main {
+        max-width: 1400px;
+    }
+
+    .intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .site-nav ul {
+        font-size: 1.2rem;
+        gap: 3rem;
+    }
+}
