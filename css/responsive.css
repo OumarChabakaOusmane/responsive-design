@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
 }
 .feature {
-    flex: 1 1 33.33%;
-    min-width: 200px;
+    flex: 1 1 300px;
+    min-width: 180px;
     box-sizing: border-box;
     padding: 1.5rem;
 }
@@ -55,6 +55,12 @@
         gap: 2rem;
         font-size: 1.1rem;
     }
+    .features {
+        flex-wrap: nowrap;
+    }
+    .feature {
+        min-width: 0;
+    }
 }
 
 /* Breakpoint 1024px - Petits écrans desktop */
@@ -83,5 +89,37 @@
     .site-nav ul {
         font-size: 1.2rem;
         gap: 3rem;
+    }
+}
+
+/* Très petits écrans (<320px) */
+@media (max-width: 319px) {
+    .site-header h1 {
+        font-size: 1.1rem;
+        padding: 0 0.2rem;
+    }
+    .feature {
+        min-width: 140px;
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+    .features {
+        flex-direction: column;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Breakpoint 1920px - Très grands écrans (4K et +) */
+@media (min-width: 1920px) {
+    .site-main {
+        max-width: 1800px;
+    }
+    .intro h2 {
+        font-size: 2.6rem;
+    }
+    .site-nav ul {
+        font-size: 1.4rem;
+        gap: 4rem;
     }
 }
